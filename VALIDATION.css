@@ -1,0 +1,69 @@
+/**************************************************
+Florina Knip / 04-09-12 / CIS 270				  
+This the CSS  for the Validate
+/**************************************************
+
+/* tags*******************************************/
+body {
+    font-family: Helvetica, sans-serif;
+    font-size:1.05em;
+    background: #def;
+}
+
+br {
+    clear: left;
+}
+
+label {
+    display: block;
+    width: 10em;
+    text-align: right;
+    padding-right: 1em;
+    float: left;
+}
+
+input {
+    display: block;
+    margin-bottom: 1em;
+    float: left;
+}
+
+span{
+	font-style: italic;
+	color: grey;
+	width: 90px;
+}
+textarea{
+	font-family: Courier New, Helvetica, sans-serif;
+	background: #def;
+	font-size: .7em;
+	font-weight: bold;
+}
+
+
+select {
+	margin-bottom: 1em;
+}
+
+/* IDs *******************************/
+#content {
+    width: 800px;
+    margin: 10px auto;
+    padding: 5px 20px;
+    background: #FFF;
+    border: 3px solid #000000;
+    border-color: #57c;
+}
+
+#futureValue {
+    color: #000000;
+}
+
+/* classes ***************************/
+.rB{margin-right: 1em}
+.flo {float: left;}
+.cen {text-align:center;}
+.cen2 {margin-left: auto; margin-right: auto;}
+.pf   {color:#f99; font-style: italic}
+.bf   {color:#57c;}
+.results{text-align:center; background-color:#8be; padding:10px; padding-bottom:25px;}

@@ -1,0 +1,220 @@
+<!-- 
+Florina Knip / 04-09-12 / CIS 270				  
+This the JAVAScript  for the Validate
+
+User chooses:
+
+- name
+- telephone
+- ssn
+- birthday
+- income
+- body type
+
+===========
+
+results: calculated tax!!
+
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title>Tax Calculator and Submission Form</title>
+
+    <link type="text/css" rel="stylesheet" href="VALIDATION.css" />
+
+    <script type="text/javascript" src="VALIDATION.js"></script>
+
+</head>
+
+
+
+<body>
+
+    <div id="content">
+
+        <h2 class="cen bf">Tax Calculator and Submission Form</h2>
+        
+<!--Name: -->
+        <div>
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName"/>
+        <span id="fNameAlert">(e.g.: Gloria)</span><br />       
+        </div>
+        
+        <div>
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" />
+        <span id="lNameAlert">(e.g.: Schmitt)</span><br />   
+        </div>
+        
+<!--Telephone: -->
+        <div>
+        <label for="telephone">Telephone:</label>
+        <input type="text" id="telephone" />
+        <span id="teleAlert">(e.g.: 333.444.5555)</span><br />       
+        </div>
+        
+<!--Social Security: -->
+        <div>
+        <label for="social_security">Social Security:</label>
+        <input type="text" id="social_security" />
+        <span  id="ssnAlert">(e.g.: 111-11-1111)</span><br />   
+        </div>
+          
+<!--Birthday: -->
+        <div>
+        <label for="birthdate">Birthdate:</label>
+        <select name="month" id="month">
+        
+        		<option value="">Select:</option>
+
+				<option value="01">January</option>
+
+				<option value="02">February</option>
+
+				<option value="03">March</option>
+
+				<option value="04">April</option>
+
+				<option value="05">May</option>
+				
+				<option value="06">June</option>
+				
+				<option value="07">July</option>
+				
+				<option value="08">August</option>
+				
+				<option value="09">September</option>
+				
+				<option value="10">October</option>
+				
+				<option value="11">November</option>
+
+				<option value="12">December</option>
+
+		</select>
+		<label for="birthdate"></label>
+		<select name="day" id="day">	
+		
+				<option value="">Select:</option>
+				
+				<option value="1">1</option>
+				
+				<option value="2">2</option>
+				
+				<option value="3">3</option>
+				
+				<option value="4">4</option>
+				
+				<option value="5">5</option>
+				
+				<option value="6">6</option>
+				
+				<option value="7">7</option>
+				
+				<option value="8">8</option>
+				
+				<option value="9">9</option>
+	
+		</select>	
+		<label for="birthdate"></label>
+		<select name="year" id="year">		
+				
+				<option value="">Select:</option>
+
+				<option value="1988">1988</option>
+				
+				<option value="1989">1989</option>
+				
+				<option value="1990">1990</option>
+				
+				<option value="1991">1991</option>
+				
+				<option value="1992">1992</option>
+				
+				<option value="1993">1993</option>
+				
+				<option value="1994">1994</option>
+				
+				<option value="1995">1995</option>
+				
+				<option value="1996">1996</option>
+	
+		</select>
+		</div><br />
+	
+<!--Income Amount: -->
+        <div>
+        <label for="income_amount">Income Amount:</label>
+        <input type="text" id="income_amount" />
+        <span id="incomeAlert">(e.g.: 1000000)</span><br />   
+        </div><br />
+        
+		<p class="pf">Calculate your deduction by checking your body type.</p>
+
+<!-- Radio Buttons: -->
+		<div class="flo rB"><input type="radio" name="calctype" id="human" value="human"/>Human</div>
+
+        <div class="flo rB"><input type="radio" name="calctype" id="robot" value="robot"/>Robot</div>
+
+        <div class="flo rB"><input type="radio" name="calctype" id="zombie" value="zombie"/>Zombie</div><br />
+        
+<!-- Calculate Button -->
+    	<div style="text-align:center">
+       		<input class="cen2" type="button" id="calculate" value="Validate from data & calculate tax" /><br />
+        </div>
+        <hr />
+
+<!-- Checkbox -->
+        <p><input type="checkbox" name="display" id="display" value="display"/>
+
+		Display tax rules in the text area.</p>
+        
+<!-- Text areas: -->
+        <div class="cen2">
+        	<div class="results flo">
+
+		  	&#9674; Results &#9674; <br />
+
+          	<textarea name="results" id="results" rows="20" cols="50"></textarea>
+
+        	</div>
+        
+        	<div class="results flo">
+        	
+			&#9674; Rules &#9674; <br />
+
+          	<textarea name="rules" id="rules" rows="20" cols="50"></textarea>
+
+        	</div><br />
+        </div>
+        
+        <p class="pf cen">Press "submit form" when you are done!.</p>
+        
+<!-- Buttons: -->
+        <input type="button" id="submit" value="submit form" /><br />
+        
+        <input type="button" id="clear" value="clear form" /><br />
+        
+        <p style="font-size:70%; color:#070;">
+            <script type="text/javascript">
+			  var currentDate = new Date();
+			  document.writeln("Today is " + currentDate.toDateString());
+			  document.writeln("<br />The time at document load: " + currentDate.toTimeString());
+			</script>
+			<noscript>You MUST enable JavaScript for this application.</noscript>
+		</p>
+         
+
+</body>
+
+</html>
